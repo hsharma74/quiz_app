@@ -139,7 +139,7 @@ $(document).ready( function() {
 	    }
 
 	    var myQ = name + " has eaten " + total + " " + myfood + 
-	              " in " + n_days + ". Every day, " + name + 
+	              " in " + n_days + "days. Every day, " + name + 
 	              " ate " + incr + " more " + myfood + " than the" +
 	              " previous day. How many did " + name + " eat on the " + 
 	              day_map[nth_day] + "?"
