@@ -1,0 +1,89 @@
+#button {
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 1.2em;
+
+}
+
+#header-bar {
+	height: 160px;
+	width: 70%;
+	background-color: #1cc77c;
+	border-radius: 50px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#quiz-title {
+	color: white;
+	font-size: 4em;
+	text-align: center;
+	padding-top: 50px;
+	letter-spacing: 0.04em;
+}
+
+#housekeeping {
+	font-color: gray;
+}
+
+#hk-buttons {
+	font-color: gray;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding-top: 10px;
+	display: inline-block;
+
+}
+
+.reset, .start-quiz {
+	background-color: white;
+	width: 8%;
+	margin-left: 5px;
+	margin-right: 5px;	
+	font-size: 1em;
+	font-family: verdana;
+	font-weight: lighter;
+	border-radius: 5px;
+	height: 30px;
+	color: #1cc77c;
+	letter-spacing: 0.03em;
+}
+
+#quiz-description {
+	color: white;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+#quiz-section {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 50px;
+	
+}
+
+#quiz-section h3 {
+	font-size: 1.5em;
+}
+
+
+#radioButtons {
+	margin-left: 10px;
+	margin-right: 10px;
+
+}
+
+.next {
+	font-size: 1em	;
+	background-color: maroon;
+	color: white;
+	border-radius: 10px;
+	height: 30px;
+	width: 80px;
+	margin-top: 20px;
+	margin-left: 50px;
+}
