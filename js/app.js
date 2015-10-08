@@ -5,11 +5,10 @@ $(document).ready( function() {
 		location.reload(true);
 	});
 
-	$('.start-quiz').click(function(event) {
-		event.preventDefault();
-		location.reload(true);
-                quiz_app();
-	});
+  $('.start-quiz').click( function() {
+  	$('.questions').find('form').remove();
+  	quiz_app();
+  });
 
 
 
@@ -281,10 +280,6 @@ $(document).ready( function() {
 
     // install a controller for the 'start' button. We want to handle the
     // case where the 'start' is pressed in the middle of the quiz.
-		$('.start-quiz').click( function() {
-			$('.questions').find('form').remove();
-			quiz_app();
-		});
 	}
 
 });
