@@ -8,6 +8,7 @@ $(document).ready( function() {
 	$('.start-quiz').click(function(event) {
 		event.preventDefault();
 		location.reload(true);
+                quiz_app();
 	});
 
 
