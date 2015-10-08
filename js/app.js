@@ -5,7 +5,10 @@ $(document).ready( function() {
 		location.reload(true);
 	});
 
-	$('.start-quiz').click(quiz_app);
+	$('.start-quiz').click(function(event) {
+		event.preventDefault();
+		location.reload(true);
+	});
 
 
 
