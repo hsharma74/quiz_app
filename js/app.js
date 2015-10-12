@@ -153,13 +153,156 @@ $(document).ready( function() {
 	    return retVal;
 		}
 
+		function question_5() {
+			var x = [2,4,5];
+			var prod = 1;
+			var mychoice = '';
+			var prodString = '';
+			for (var i = 0; i < getRandom(5,8); i++) {
+				if (i != 0) {
+					prodString += ' x ';
+				}
+				mychoice = randomChoice(x);
+				prodString += mychoice;
+				//console.log(prodString);
+				prod *= mychoice;
+			}
+
+			var myQ = "What is the value of the product " + prodString + "?"
+
+			var answer = prod;
+			var choices = genChoices(prod);
+			var retVal = new Question(myQ, choices, answer);
+			return retVal;
+		}
+
+
+		function question_6() {
+			var g_num = getRandom(1, 4);
+			var f_num = getRandom(15, 20);
+			var g_map = {1 : 'first', 2: 'second', 3: 'third', 4: 'fourth'};
+			var f_map = {15: 'fifteenth', 16: 'sixteenth', 17: 'seventeenth', 
+		               18: 'eighteenth', 19: 'nineteenth', 20: 'twentieth'};
+
+			var myQ = "Gregor is the " + g_map[g_num] + " person standing in line " 
+			          + "His friend is the " + f_map[f_num] + " person standing in line."
+			          + " How many people are there betweeen Gregor and his friend?" 
+
+			var answer = f_num - g_num - 1;
+			var choices = genChoices(answer);
+			var retVal = new Question(myQ, choices, answer);
+			return retVal;
+		}
+
+
+		function question_7() {
+			var nums = [getRandom(3,6), getRandom(5,8), getRandom(4,7), getRandom(6,9)];
+			var n1 = randomChoice([1,2,3]);
+
+		}
+
+
+		function question_8() {
+			var n1 = getRandom(100,200);
+			var n2 = getRandom(200,300);
+			var n3 = getRandom(300,400);
+
+			var answer = (n1 + n2 + n3) * 10;
+			var prodString = "10 x " + n1 + " + 10 x " + n2 + " + 10 x " + n3;
+			var myQ = "Evaluate: " + prodString 
+
+			var choices = genChoices(answer);
+			var retVal = new Question(myQ, choices, answer);
+			return retVal;
+		}
+
+
+    function question_9() {
+    	var lastBox = getRandom(10, 19);
+    	var nbox = getRandom(4,8);
+    	var npencils = nbox*(nbox-1)/2  + lastBox;
+    	var myQ = "Julio has " + npencils + " pencils. He puts the pencils into " + nbox
+    	           + ". Each box has at least one pencil. There is a different " 
+    	           + "number of pencils in each box. He puts as many pencils as he"
+    	           + " can into the last box. How many pencils are in the last box?"
+
+    	var answer = lastBox;
+    	var choices = genChoices(answer);
+    	var retVal = new Question(myQ, choices, answer);
+    	return retVal;
+    }
+
+    function question_10() {
+    	var start = getRandom(7,14);
+    	var pages = getRandom(4,7);
+    	var sum = start * pages + (pages) * (pages-1)/2
+
+    	var myQ = "The sum of pages numbers of Chapeter 2 (of a certain book) is "
+    	          + sum + ". If there are " + pages + " pages in Chapter 2, on what pages"
+    	          + " does Chapter 2 begin?";
+
+    	var choices = genChoices(start);
+    	var retVal = new Question(myQ, choices, start);
+    	return retVal;
+    }
+
+
+    function question_11() {
+    	var num_marks = getRandom(4,6);
+    	var distance  = getRandom(5,10);
+    	var length = distance * (num_marks - 1);
+    	var diff = 100 - length;
+    	var num_map = {1: 'first', 2: 'second', 3: 'third', 4: 'fourth', 5: 'fifth'};
+
+    	var start = getRandom(1, diff);
+    	var last  = start + length;
+    	var guess = getRandom(2, num_marks-1);
+
+    	var myQ = "There are " + num_marks + " marks evenly spaced from each other "
+    	          + "along a meter stick. The first mark is at " + start + " cm. The"
+    	          + " last mark is at " + last + " cm. Where, in centimeteres, is the "
+    	          + num_map[guess] + " mark?";
+
+    	var answer = start + distance * (guess-1);
+    	var choices = genChoices(answer);
+    	var retVal = new Question(myQ, choices, answer);
+    	return retVal;
+    }
+
+
+    function question_12() {
+    	var myArr = [];
+    	var answer = 0;
+    	for (var i = 0; i < 36; i++) {
+    		myArr.push(getRandom(3,5));
+    	}
+    	var myNumString = "";
+    	for ( var i = 0; i < 36; i++) {
+    		if (i != 0 && i % 6 == 0) {
+    			myNumString += "\n";
+    		}
+    		answer += myArr[i];
+    		myNumString += myArr[i];
+    		myNumString += " ";
+ 				//console.log(myNumString);
+    	}
+
+    	var myQ = "What is the sum of the digits in the arrangement below? "
+    	          + "\n" + myNumString ;
+    	
+    	var choices = genChoices(answer);
+    	var retVal = new Question(myQ, choices, answer);
+    	return retVal;
+    }
+
 
 		// this array stores all the question generating functions 
 		// an array of function pointers
-		var quesGenArray = [question_2, question_3, question_4];
+		var quesGenArray = [question_2, question_3, question_4, question_5, question_6,
+		                    question_8, question_9, question_10, question_11, question_12];
 
 		// MAX number of questions to generate
-		var numQuestions = 10; 
+		var numQuestions = 20; 
 		// store all the generated questions in this array 
 		var questionArray = []; 
 
