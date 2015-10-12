@@ -237,7 +237,7 @@ $(document).ready( function() {
     	var pages = getRandom(4,7);
     	var sum = start * pages + (pages) * (pages-1)/2
 
-    	var myQ = "The sum of pages numbers of Chapeter 2 (of a certain book) is "
+    	var myQ = "The sum of pages numbers of Chapter 2 (of a certain book) is "
     	          + sum + ". If there are " + pages + " pages in Chapter 2, on what pages"
     	          + " does Chapter 2 begin?";
 
