@@ -222,7 +222,7 @@ $(document).ready( function() {
     	var nbox = getRandom(4,8);
     	var npencils = nbox*(nbox-1)/2  + lastBox;
     	var myQ = "Julio has " + npencils + " pencils. He puts the pencils into " + nbox
-    	           + ". Each box has at least one pencil. There is a different " 
+    	           + " boxes. Each box has at least one pencil. There is a different " 
     	           + "number of pencils in each box. He puts as many pencils as he"
     	           + " can into the last box. How many pencils are in the last box?"
 
