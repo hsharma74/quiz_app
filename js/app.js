@@ -184,7 +184,7 @@ $(document).ready( function() {
 			var f_map = {15: 'fifteenth', 16: 'sixteenth', 17: 'seventeenth', 
 		               18: 'eighteenth', 19: 'nineteenth', 20: 'twentieth'};
 
-			var myQ = "Gregor is the " + g_map[g_num] + " person standing in line " 
+			var myQ = "Gregor is the " + g_map[g_num] + " person standing in line. " 
 			          + "His friend is the " + f_map[f_num] + " person standing in line."
 			          + " How many people are there betweeen Gregor and his friend?" 
 
